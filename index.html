@@ -1,57 +1,33 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-        p {
-            text-align: center;
-            font-size: 60px;
-            margin-top: 0px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Clock</title>
 </head>
 
 <body>
+    <div class="clock">
+        <div>
+            <span id="hours">00</span>
+            <span class="time">Hours</span>
+        </div>
 
-    <p id="demo"></p>
-    <p>FORMATURA DO LUIZ</p>
-    <p>UHUL</p>
-    <p>Parabéns pra mim</p>
-    <p>Horário: 13/Ago/22 - 21h</p>
+        <div>
+            <span id="minutes">00</span>
+            <span class="time">Minutes</span>
+        </div>
 
-    <script>
-        // Set the date we're counting down to
-        var countDownDate = new Date("Aug 13, 2022 21:00:00").getTime();
+        <div>
+            <span id="seconds">00</span>
+            <span class="time">Seconds</span>
+        </div>
+    </div>
 
-        var x = setInterval(function () {
-
-            var now = new Date().getTime();
-
-            var distance = countDownDate - now;
-
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-            document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("demo").innerHTML = "EXPIRED";
-            }
-        }, 1000);
-    </script>
-
-    <p><iframe style="border-radius:12px"
-            src="https://open.spotify.com/embed/playlist/0Wv1AFDF2u75sNCF5WOzqz?utm_source=generator" width="50%"
-            height="380" frameBorder="30" allowfullscreen=""
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
-        </iframe>
-    </p>
-
+    <script src="assets/js/script.js"></script>
 </body>
 
 </html>
